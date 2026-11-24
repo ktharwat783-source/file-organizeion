@@ -1,0 +1,29 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+    // Create and write to file
+    ofstream file("data.txt");
+
+    file << "Hello World" << endl;
+    file << "File Organization" << endl;
+    file << "C++ Programming" << endl;
+
+    file.close();
+
+    // Read from file
+    ifstream readFile("data.txt");
+
+    string line;
+
+    while (getline(readFile, line))
+    {
+        cout << line << endl;
+    }
+
+    readFile.close();
+
+    return 0;
+}
